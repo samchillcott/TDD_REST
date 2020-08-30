@@ -1,4 +1,6 @@
-function post() {
+import * as fetch from 'node-fetch';
+
+const post = () => {
 	fetch("https://jsonplaceholder.typicode.com/posts", {
 		method: "POST",
 		body: JSON.stringify({
