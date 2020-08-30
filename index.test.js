@@ -7,11 +7,11 @@ const del = require("./index");
 // POST
 
 describe("post function", () => {
-	test("post function exists", () => {
+	it("should exist", () => {
 		expect(post()).toBe(undefined);
 	});
 
-	test("post function returns something?", () => {
+	it("should return something?", () => {
 		expect(post()).toBeTruthy();
 	});
 });
