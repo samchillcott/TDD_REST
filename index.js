@@ -1,4 +1,5 @@
-import * as fetch from 'node-fetch';
+// import * as fetch from 'node-fetch';
+const { fetch } = require("node-fetch");
 
 const post = () => {
 	fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -17,7 +18,7 @@ const post = () => {
 	// return {
 	// 	status: 200,
 	// };
-}
+};
 
 post();
 
