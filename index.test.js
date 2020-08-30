@@ -12,7 +12,7 @@ describe("post function", () => {
 	});
 
 	it("should return an object", () => {
-		expect(post()).toBe();
+		expect(post()).toStrictEqual({});
 	});
 	it("should return an object with status code 200/ok", () => {
 		expect(post()).toBe();

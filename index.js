@@ -1,3 +1,5 @@
- function post() {}
+ function post() {
+     return {}
+ }
 
  exports.post = post
