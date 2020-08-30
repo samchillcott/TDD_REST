@@ -1,1 +1,3 @@
-export default function post()
+ function post() {}
+
+ exports.post = post

@@ -1,4 +1,4 @@
-const post = require("./index");
+const { post } = require("./index");
 const get = require("./index");
 const put = require("./index");
 const patch = require("./index");
@@ -8,7 +8,7 @@ const del = require("./index");
 
 describe("post function", () => {
 	test("post function exists", () => {
-		expect(post()).toBeTruthy();
+		expect(post()).toBe(undefined);
 	});
 
 	test("post function returns something?", () => {
