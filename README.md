@@ -1,4 +1,4 @@
-# TDD_REST
+# TDD & REST Basic
 
 Using Test-Driven Development (TDD), write a simple front end app that communicates with a placeholder REST API.
 
