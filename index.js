@@ -1,5 +1,7 @@
- function post() {
-     return {}
- }
+function post() {
+	return {
+		status: 200,
+	};
+}
 
- exports.post = post
+exports.post = post;
