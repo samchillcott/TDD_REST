@@ -1,5 +1,5 @@
 const { post, get, put, patch, del } = require("./index");
-const axios = require("./axios");
+const axios = require("axios");
 // const {axios} = require('axios').default;
 
 
