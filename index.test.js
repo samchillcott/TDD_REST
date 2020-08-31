@@ -1,8 +1,4 @@
-const { post } = require("./index");
-const { get } = require("./index");
-const { put } = require("./index");
-const { patch } = require("./index");
-const { del } = require("./index");
+const { post, get, put, patch, del } = require("./index");
 
 // POST
 
