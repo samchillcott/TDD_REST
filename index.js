@@ -1,22 +1,21 @@
 // import * as fetch from 'node-fetch';
 // const { fetch } = require("node-fetch");
-const axios = require('axios');
-
+const { axios } = require("axios");
+// import axios from 'axios';
 
 const post = () => {
-	axios.post("https://jsonplaceholder.typicode.com/posts", {
-		method: "POST",
-		body: JSON.stringify({
+	axios
+		.post("https://jsonplaceholder.typicode.com/posts", {
 			title: "foo",
 			body: "bar",
 			userId: 1,
-		}),
-		headers: {
-			"Content-type": "application/json; charset=UTF-8",
-		},
-	})
-		.then((response) => response.json())
-		.then((json) => console.log(json));
+		})
+		.then(function (response) {
+			console.log(response);
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
 	// return {
 	// 	status: 200,
 	// };
