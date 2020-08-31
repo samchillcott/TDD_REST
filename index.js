@@ -1,6 +1,5 @@
 // import * as fetch from 'node-fetch';
 // const { fetch } = require("node-fetch");
-const { axios } = require("axios");
 // import axios from 'axios';
 
 const post = () => {
