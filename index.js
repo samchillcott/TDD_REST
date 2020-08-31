@@ -1,6 +1,7 @@
 // import * as fetch from 'node-fetch';
 // const { fetch } = require("node-fetch");
-// import axios from 'axios';
+// import axios from "axios";
+// const {axios} = require('axios').default;
 
 const post = () => {
 	axios
@@ -22,4 +23,10 @@ const post = () => {
 
 post();
 
-exports.post = post;
+// exports.post = post;
+
+// export default post;
+
+module.exports = {
+	post
+}
