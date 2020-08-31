@@ -1,8 +1,10 @@
 // import * as fetch from 'node-fetch';
-const { fetch } = require("node-fetch");
+// const { fetch } = require("node-fetch");
+const axios = require('axios');
+
 
 const post = () => {
-	fetch("https://jsonplaceholder.typicode.com/posts", {
+	axios.post("https://jsonplaceholder.typicode.com/posts", {
 		method: "POST",
 		body: JSON.stringify({
 			title: "foo",
