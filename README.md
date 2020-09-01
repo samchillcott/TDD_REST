@@ -17,7 +17,7 @@
 ## Features
 
 - Each button uses a different HTTP method to interact with JSON Placeholder.
-- Alerts once method successful and displays status code.
+- Once async function completes it displays a success message, the REST method used, status code and body (where appropriate).
 
 ## What I Learned
 
