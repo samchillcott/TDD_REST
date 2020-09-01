@@ -16,8 +16,13 @@
 
 ## Features
 
-- Each button uses a different HTTP method to interact with JSON Placeholder.
+- Each button uses a different HTTP method to interact with JSON Placeholder and using headers (where required).
 - Once async function completes it displays a success message, the REST method used, status code and body (where appropriate).
+- POST - create a resource.
+- GET - fetch a (single) resource.
+- PUT - update a resource (replace the entire resource with given data).
+- PATCH - update a resource (only the specified fields).
+- DELETE - Delete a resource.
 
 ## What I Learned
 
