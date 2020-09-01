@@ -1,6 +1,34 @@
 # TDD & REST Basic
 
-Using Test-Driven Development (TDD), write a simple front end app that communicates with a placeholder REST API.
+- Using Test-Driven Development (TDD), write a simple front end app that communicates with a placeholder REST API. Original spec below - initial aim was to cover two concepts in one.
+- Note: Although TDD was used from the start, issues with the node environment meant the project was finished with only the REST functionality. TDD principles were learned in the process nevertheless.
+
+## Tech Used
+
+- TDD (up to a point).
+- Javascript (inc async-await).
+- DOM manipulation.
+- Jest.js - unit testing.
+- RESTful API.
+- Axios - Promise based HTTP client for the browser and node.js.
+- package builder - build tool.
+- Netlify - hosting.
+
+## Features
+
+- Each button uses a different HTTP method to interact with JSON Placeholder.
+
+## What I Learned
+
+- Test-Driven Development - Understanding and implementing TDD so starting with tests before writing the production code. Red, Green, Refactor and the finer details on the actual process.
+- REST - worked with 3rd party APIs before but fist time with RESTful web services.
+- Axios - refactoring from fetch.
+- Importing & exporting modules.
+- Executive decisions - When to drop a feature/fix (potentially during a sprint) and move on.
+
+## Challenges
+
+## Improvements
 
 ## Original Spec
 
