@@ -1,7 +1,7 @@
 # TDD & REST Basic
 
 - Using Test-Driven Development (TDD), write a simple front end app that communicates with a placeholder REST API. Original spec below - initial aim was to cover two concepts in one.
-- Note: Although TDD was used from the start, issues with the node environment meant the project was completed with only the REST functionality. TDD principles were learned in the process nevertheless.
+- Note: Although TDD was used from the start, issues with the node environment meant the project was completed with only the REST functionality. TDD principles were learned in the process nevertheless. Full explanation in Challenges section.
 
 ## Tech Used
 
@@ -17,6 +17,7 @@
 ## Features
 
 - Each button uses a different HTTP method to interact with JSON Placeholder.
+- Alerts once method successful and displays status code.
 
 ## What I Learned
 
