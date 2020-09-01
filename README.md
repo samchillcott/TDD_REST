@@ -22,7 +22,7 @@
 - GET - fetch a (single) resource.
 - PUT - update a resource (replace the entire resource with given data).
 - PATCH - update a resource (only the specified fields).
-- DELETE - Delete a resource.
+- DELETE - delete a resource.
 
 ## What I Learned
 
