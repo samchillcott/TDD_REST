@@ -125,17 +125,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-// import * as fetch from 'node-fetch';
-// const { fetch } = require("node-fetch");
 // import axios from "axios";
-// try {
-// 	const axios = require("axios").default;
-// } catch {}
-// if (typeof window === "undefined") {
-// 	const axios = require("axios").default;
-// 	// import axios from "axios";
-// }
+// const axiosPost = document.queryselector('#post-btn');
+// axiosPost.addeventlistener(“click”, post);
 var post = function post() {
+  console.log("post clicked");
   axios.post("https://jsonplaceholder.typicode.com/posts", {
     title: "foo",
     body: "bar",
@@ -144,33 +138,12 @@ var post = function post() {
     console.log(response);
   }).catch(function (error) {
     console.log(error);
-  }); // return {
-  // 	status: 200,
-  // };
-}; // const post = () {
-// 	fetch('https://jsonplaceholder.typicode.com/posts', {
-//     method: 'POST',
-//     body: JSON.stringify({
-//       title: 'foo',
-//       body: 'bar',
-//       userId: 1
-//     }),
-//     headers: {
-//       "Content-type": "application/json; charset=UTF-8"
-//     }
-//   })
-//   .then(response => response.json())
-//   .then(json => console.log(json))
-// }
-
-
-post(); // exports.post = post;
+  });
+}; // post();
 // this works in the browser
 
-var _default = post; // module.exports = {
-// 	post
-// }
 
+var _default = post;
 exports.default = _default;
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -200,7 +173,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54310" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52546" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
