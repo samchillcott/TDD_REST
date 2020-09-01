@@ -7,11 +7,19 @@ const axiosPost = document.querySelector("#post-btn");
 const post = async () => {
 	console.log("btn clicked");
 	await axios
-		.post("https://jsonplaceholder.typicode.com/posts", {
-			title: "foo",
-			body: "bar",
-			userId: 1,
-		})
+		.post(
+			"https://jsonplaceholder.typicode.com/posts",
+			{
+				title: "foo",
+				body: "bar",
+				userId: 1,
+			},
+			{
+				headers: {
+					"Content-type": "application/json; charset=UTF-8",
+				},
+			}
+		)
 		.then(function (response) {
 			console.log(response);
 			document.getElementById("summary").innerHTML =
@@ -61,11 +69,19 @@ const axiosPut = document.querySelector("#put-btn");
 const put = async () => {
 	console.log("btn clicked");
 	await axios
-		.put("https://jsonplaceholder.typicode.com/posts/1", {
-			title: "foo",
-			body: "bar",
-			userId: 1,
-		})
+		.put(
+			"https://jsonplaceholder.typicode.com/posts/1",
+			{
+				title: "foo",
+				body: "bar",
+				userId: 1,
+			},
+			{
+				headers: {
+					"Content-type": "application/json; charset=UTF-8",
+				},
+			}
+		)
 		.then(function (response) {
 			console.log(response);
 			document.getElementById("summary").innerHTML =
@@ -90,9 +106,17 @@ const axiosPatch = document.querySelector("#patch-btn");
 const patch = async () => {
 	console.log("btn clicked");
 	await axios
-		.patch("https://jsonplaceholder.typicode.com/posts/1", {
-			title: "foo",
-		})
+		.patch(
+			"https://jsonplaceholder.typicode.com/posts/1",
+			{
+				title: "foo",
+			},
+			{
+				headers: {
+					"Content-type": "application/json; charset=UTF-8",
+				},
+			}
+		)
 		.then(function (response) {
 			console.log(response);
 			document.getElementById("summary").innerHTML =

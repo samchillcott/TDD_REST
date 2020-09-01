@@ -138,6 +138,10 @@ var post = /*#__PURE__*/function () {
               title: "foo",
               body: "bar",
               userId: 1
+            }, {
+              headers: {
+                "Content-type": "application/json; charset=UTF-8"
+              }
             }).then(function (response) {
               console.log(response);
               document.getElementById("summary").innerHTML = "Data Posted! <br> Method: " + response.config.method.toUpperCase() + "<br> Status: " + response.status + "<br> Body: " + response.data.body;
@@ -206,6 +210,10 @@ var put = /*#__PURE__*/function () {
               title: "foo",
               body: "bar",
               userId: 1
+            }, {
+              headers: {
+                "Content-type": "application/json; charset=UTF-8"
+              }
             }).then(function (response) {
               console.log(response);
               document.getElementById("summary").innerHTML = "Data Updated! <br> Method: " + response.config.method.toUpperCase() + "<br> Status: " + response.status + "<br> Body: " + response.data.body;
@@ -240,6 +248,10 @@ var patch = /*#__PURE__*/function () {
             _context4.next = 3;
             return axios.patch("https://jsonplaceholder.typicode.com/posts/1", {
               title: "foo"
+            }, {
+              headers: {
+                "Content-type": "application/json; charset=UTF-8"
+              }
             }).then(function (response) {
               console.log(response);
               document.getElementById("summary").innerHTML = "Data Updated! <br> Method: " + response.config.method.toUpperCase() + "<br> Status: " + response.status + "<br> Body: " + response.data.body;
