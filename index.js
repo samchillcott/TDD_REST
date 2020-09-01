@@ -1,9 +1,11 @@
 // import axios from "axios";
-const axiosPost = document.querySelector("#post-btn");
 
 // Imitates creating a resource (POST) at JSONPlaceholder
+
+const axiosPost = document.querySelector("#post-btn");
+
 const post = () => {
-	console.log("post clicked");
+	console.log("btn clicked");
 	axios
 		.post("https://jsonplaceholder.typicode.com/posts", {
 			title: "foo",
@@ -12,7 +14,7 @@ const post = () => {
 		})
 		.then(function (response) {
 			console.log(response);
-			alert("Data Posted");
+			alert("Data Posted. Status: " + response.status);
 		})
 		.catch(function (error) {
 			console.log(error);
@@ -21,7 +23,24 @@ const post = () => {
 
 axiosPost.addEventListener("click", post);
 
-// post();
+// Fetches a resource (GET) from JSONPlaceholder
+
+const axiosGet = document.querySelector("#get-btn");
+
+const get = () => {
+	console.log("btn clicked");
+	axios
+		.get("https://jsonplaceholder.typicode.com/posts/1")
+		.then(function (response) {
+			console.log(response);
+			alert("Data Fetched. Status: " + response.status);
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
+};
+
+axiosGet.addEventListener("click", get);
 
 // this works in the browser
 // export default post;
