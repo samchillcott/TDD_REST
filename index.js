@@ -42,7 +42,7 @@ const get = async () => {
 
 axiosGet.addEventListener("click", get);
 
-// Imitates putting a resource (PUT) at JSONPlaceholder
+// Imitates updating a resource (PUT) at JSONPlaceholder
 
 const axiosPut = document.querySelector("#put-btn");
 
@@ -64,6 +64,46 @@ const put = async () => {
 };
 
 axiosPut.addEventListener("click", put);
+
+// Imitates updating a resource (one field using PATCH) at JSONPlaceholder
+
+const axiosPatch = document.querySelector("#patch-btn");
+
+const patch = async () => {
+	console.log("btn clicked");
+	await axios
+		.patch("https://jsonplaceholder.typicode.com/posts/1", {
+			title: "foo",
+		})
+		.then(function (response) {
+			console.log(response);
+			alert("Data patched. Status: " + response.status);
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
+};
+
+axiosPatch.addEventListener("click", patch);
+
+// Imitates deleting a resource (DELETE) at JSONPlaceholder
+
+const axiosDelete = document.querySelector("#del-btn");
+
+const del = async () => {
+	console.log("btn clicked");
+	await axios
+		.delete("https://jsonplaceholder.typicode.com/posts/1")
+		.then(function (response) {
+			console.log(response);
+			alert("Data deleted. Status: " + response.status);
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
+};
+
+axiosDelete.addEventListener("click", del);
 
 // this works in the browser
 // export default post;
