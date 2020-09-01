@@ -37,7 +37,9 @@
 - Environment issues & importing/exporting modules - bringing in variables/libraries to work in both the browser and node/Jest. I could get axios working in the browser but then not in node and vice versa.
   - Fetch undefined - fetch is aJS function so unavailable in node (which is where jest is running the tests. Jest uses Node.js and Node.js does not come with fetch => specific to web browsers so I tried node-fetch then axios.
   - Also tried babel-jest, parcel-bundler, jest-mock-axios and axios-mock-adapter.
-  - May need to use mocking in jest so decided to leave TDD element and continue finishing the basic crude REST app.
+  - May need to use mocking in jest.
+  - Axios was struggling to be found in the node/jest environment (working fine in browser) and seemed to be something jest were aware of and in the process of fixing.
+  - Decided to leave TDD element and continue finishing the basic crude REST app.
 
 ## Improvements
 
