@@ -1,6 +1,5 @@
 // import axios from "axios";
 const axiosPost = document.querySelector("#post-btn");
-axiosPost.addEventListener("click", post);
 
 // Imitates creating a resource (POST) at JSONPlaceholder
 const post = () => {
@@ -13,11 +12,14 @@ const post = () => {
 		})
 		.then(function (response) {
 			console.log(response);
+			alert("Data Posted");
 		})
 		.catch(function (error) {
 			console.log(error);
 		});
 };
+
+axiosPost.addEventListener("click", post);
 
 // post();
 
