@@ -1,9 +1,9 @@
 // import * as fetch from 'node-fetch';
 // const { fetch } = require("node-fetch");
 // import axios from "axios";
-try {
-	const axios = require("axios").default;
-} catch {}
+// try {
+// 	const axios = require("axios").default;
+// } catch {}
 
 // if (typeof window === "undefined") {
 // 	const axios = require("axios").default;
