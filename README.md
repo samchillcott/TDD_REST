@@ -1,7 +1,7 @@
 # TDD & REST Basic
 
 - Using Test-Driven Development (TDD), write a simple front end app that communicates with a placeholder REST API. Original spec below - initial aim was to cover two concepts in one.
-- Note: Although TDD was used from the start, issues with the node environment meant the project was finished with only the REST functionality. TDD principles were learned in the process nevertheless.
+- Note: Although TDD was used from the start, issues with the node environment meant the project was completed with only the REST functionality. TDD principles were learned in the process nevertheless.
 
 ## Tech Used
 
@@ -22,13 +22,33 @@
 
 - Test-Driven Development - Understanding and implementing TDD so starting with tests before writing the production code. Red, Green, Refactor and the finer details on the actual process.
 - REST - worked with 3rd party APIs before but fist time with RESTful web services.
-- Axios - refactoring from fetch.
+- Axios - Promise based HTTP client for the browser and node.js. An alternative to fetch API.
 - Importing & exporting modules.
 - Executive decisions - When to drop a feature/fix (potentially during a sprint) and move on.
 
 ## Challenges
 
+- TDD - getting head around a different approach from the start.
+  Initially Unsure whether to write all the tests for the one function first then write the function or do the first test, then pass it, then go write the second test (for the first function). After watching a great talk on YT I found it was Add an assertion to test, then fulfil, repeat.I dived straight into the tests after the reading, few yt demos would have helped.
+- Modules - Remembering node export/import syntax.
+- Unit tests - remembering how to set up (did testing in a project a month or so ago) and what to test for.
+- Delete - planned to use it for REST but it is a reserved keyword in JS.
+- Environment issues & importing/exporting modules - bringing in variables/libraries to work in both the browser and node/Jest. I could get axios working in the browser but then not in node and vice versa.
+  - Fetch undefined - fetch is aJS function so unavailable in node (which is where jest is running the tests. Jest uses Node.js and Node.js does not come with fetch => specific to web browsers so I tried node-fetch then axios.
+  - Also tried babel-jest, parcel-bundler, jest-mock-axios and axios-mock-adapter.
+  - May need to use mocking in jest so decided to leave TDD element and continue finishing the basic crude REST app.
+
 ## Improvements
+
+- DRY the main functions - refactor to take 2 arguments: method and data.
+- Use React and webpack so imports compile easier (potentially enabling axios to be used in the node environment as well as the brwoser).
+- Possibly use a wrapper object?
+- Host on AWS EC2 for further hosting experience.
+
+## Watch Me Build This
+
+- #daysofcode 30/8/20 - 1/9/20.
+- [Daily Videos - Instagram](https://www.instagram.com/samchillcott/)
 
 ## Original Spec
 
