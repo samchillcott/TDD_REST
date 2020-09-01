@@ -118,33 +118,182 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-"use strict";
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 // import axios from "axios";
-// const axiosPost = document.queryselector('#post-btn');
-// axiosPost.addeventlistener(“click”, post);
-var post = function post() {
-  console.log("post clicked");
-  axios.post("https://jsonplaceholder.typicode.com/posts", {
-    title: "foo",
-    body: "bar",
-    userId: 1
-  }).then(function (response) {
-    console.log(response);
-  }).catch(function (error) {
-    console.log(error);
-  });
-}; // post();
-// this works in the browser
+// Imitates creating a resource (POST) at JSONPlaceholder
+var axiosPost = document.querySelector("#post-btn");
 
+var post = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            console.log("btn clicked");
+            _context.next = 3;
+            return axios.post("https://jsonplaceholder.typicode.com/posts", {
+              title: "foo",
+              body: "bar",
+              userId: 1
+            }).then(function (response) {
+              console.log(response);
+              alert("Data Posted. Status: " + response.status);
+            }).catch(function (error) {
+              console.log(error);
+            });
 
-var _default = post;
-exports.default = _default;
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function post() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+axiosPost.addEventListener("click", post); // Fetches a resource (GET) from JSONPlaceholder
+
+var axiosGet = document.querySelector("#get-btn");
+
+var get = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            console.log("btn clicked");
+            _context2.next = 3;
+            return axios.get("https://jsonplaceholder.typicode.com/posts/1").then(function (response) {
+              console.log(response);
+              alert("Data Fetched. Status: " + response.status);
+            }).catch(function (error) {
+              console.log(error);
+            });
+
+          case 3:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function get() {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
+axiosGet.addEventListener("click", get); // Imitates updating a resource (PUT) at JSONPlaceholder
+
+var axiosPut = document.querySelector("#put-btn");
+
+var put = /*#__PURE__*/function () {
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+    return regeneratorRuntime.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            console.log("btn clicked");
+            _context3.next = 3;
+            return axios.put("https://jsonplaceholder.typicode.com/posts/1", {
+              title: "foo",
+              body: "bar",
+              userId: 1
+            }).then(function (response) {
+              console.log(response);
+              alert("Data Put. Status: " + response.status);
+            }).catch(function (error) {
+              console.log(error);
+            });
+
+          case 3:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+
+  return function put() {
+    return _ref3.apply(this, arguments);
+  };
+}();
+
+axiosPut.addEventListener("click", put); // Imitates updating a resource (one field using PATCH) at JSONPlaceholder
+
+var axiosPatch = document.querySelector("#patch-btn");
+
+var patch = /*#__PURE__*/function () {
+  var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+    return regeneratorRuntime.wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            console.log("btn clicked");
+            _context4.next = 3;
+            return axios.patch("https://jsonplaceholder.typicode.com/posts/1", {
+              title: "foo"
+            }).then(function (response) {
+              console.log(response);
+              alert("Data patched. Status: " + response.status);
+            }).catch(function (error) {
+              console.log(error);
+            });
+
+          case 3:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4);
+  }));
+
+  return function patch() {
+    return _ref4.apply(this, arguments);
+  };
+}();
+
+axiosPatch.addEventListener("click", patch); // Imitates deleting a resource (DELETE) at JSONPlaceholder
+
+var axiosDelete = document.querySelector("#del-btn");
+
+var del = /*#__PURE__*/function () {
+  var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+    return regeneratorRuntime.wrap(function _callee5$(_context5) {
+      while (1) {
+        switch (_context5.prev = _context5.next) {
+          case 0:
+            console.log("btn clicked");
+            _context5.next = 3;
+            return axios.delete("https://jsonplaceholder.typicode.com/posts/1").then(function (response) {
+              console.log(response);
+              alert("Data deleted. Status: " + response.status);
+            }).catch(function (error) {
+              console.log(error);
+            });
+
+          case 3:
+          case "end":
+            return _context5.stop();
+        }
+      }
+    }, _callee5);
+  }));
+
+  return function del() {
+    return _ref5.apply(this, arguments);
+  };
+}();
+
+axiosDelete.addEventListener("click", del); // this works in the browser
+// export default post;
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -173,7 +322,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52546" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60470" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
