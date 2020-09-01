@@ -4,9 +4,9 @@
 
 const axiosPost = document.querySelector("#post-btn");
 
-const post = () => {
+const post = async () => {
 	console.log("btn clicked");
-	axios
+	await axios
 		.post("https://jsonplaceholder.typicode.com/posts", {
 			title: "foo",
 			body: "bar",
@@ -27,9 +27,9 @@ axiosPost.addEventListener("click", post);
 
 const axiosGet = document.querySelector("#get-btn");
 
-const get = () => {
+const get = async () => {
 	console.log("btn clicked");
-	axios
+	await axios
 		.get("https://jsonplaceholder.typicode.com/posts/1")
 		.then(function (response) {
 			console.log(response);
@@ -41,6 +41,29 @@ const get = () => {
 };
 
 axiosGet.addEventListener("click", get);
+
+// Imitates putting a resource (PUT) at JSONPlaceholder
+
+const axiosPut = document.querySelector("#put-btn");
+
+const put = async () => {
+	console.log("btn clicked");
+	await axios
+		.put("https://jsonplaceholder.typicode.com/posts/1", {
+			title: "foo",
+			body: "bar",
+			userId: 1,
+		})
+		.then(function (response) {
+			console.log(response);
+			alert("Data Put. Status: " + response.status);
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
+};
+
+axiosPut.addEventListener("click", put);
 
 // this works in the browser
 // export default post;
