@@ -1,4 +1,4 @@
-const { post, get, put, patch, del } = require("./index.mjs");
+const { post, get, put, patch, del } = require("./index.js");
 const axios = require("axios");
 // import {post} from './index';
 // const {axios} = require('axios').default;
