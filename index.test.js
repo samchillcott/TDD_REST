@@ -1,7 +1,8 @@
 const { post, get, put, patch, del } = require("./index.js");
-const axios = require("axios");
-// import {post} from './index';
-// const {axios} = require('axios').default;
+// const axios = require("axios");
+import axios from "axios";
+// const axios = require('axios').default;
+// window.axios=require('axios');
 
 
 // POST
