@@ -139,8 +139,9 @@ var post = /*#__PURE__*/function () {
               body: "bar",
               userId: 1
             }).then(function (response) {
-              console.log(response);
-              alert("Data Posted. Status: " + response.status);
+              console.log(response); // alert("Data Posted. Status: " + response.status);
+
+              document.getElementById("summary").innerHTML = "Data Posted! <br> Method: " + response.config.method.toUpperCase() + "<br> Status: " + response.status + "<br> Body: " + response.data.body;
             }).catch(function (error) {
               console.log(error);
             });
@@ -171,8 +172,9 @@ var get = /*#__PURE__*/function () {
             console.log("btn clicked");
             _context2.next = 3;
             return axios.get("https://jsonplaceholder.typicode.com/posts/1").then(function (response) {
-              console.log(response);
-              alert("Data Fetched. Status: " + response.status);
+              console.log(response); // alert("Data Fetched. Status: " + response.status);
+
+              document.getElementById("summary").innerHTML = "Data Fetched! <br> Method: " + response.config.method.toUpperCase() + "<br> Status: " + response.status + "<br> Body: " + response.data.body;
             }).catch(function (error) {
               console.log(error);
             });

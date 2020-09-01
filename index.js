@@ -14,7 +14,14 @@ const post = async () => {
 		})
 		.then(function (response) {
 			console.log(response);
-			alert("Data Posted. Status: " + response.status);
+			// alert("Data Posted. Status: " + response.status);
+			document.getElementById("summary").innerHTML =
+				"Data Posted! <br> Method: " +
+				response.config.method.toUpperCase() +
+				"<br> Status: " +
+				response.status +
+				"<br> Body: " +
+				response.data.body;
 		})
 		.catch(function (error) {
 			console.log(error);
@@ -33,7 +40,14 @@ const get = async () => {
 		.get("https://jsonplaceholder.typicode.com/posts/1")
 		.then(function (response) {
 			console.log(response);
-			alert("Data Fetched. Status: " + response.status);
+			// alert("Data Fetched. Status: " + response.status);
+			document.getElementById("summary").innerHTML =
+				"Data Fetched! <br> Method: " +
+				response.config.method.toUpperCase() +
+				"<br> Status: " +
+				response.status +
+				"<br> Body: " +
+				response.data.body;
 		})
 		.catch(function (error) {
 			console.log(error);
