@@ -14,7 +14,6 @@ const post = async () => {
 		})
 		.then(function (response) {
 			console.log(response);
-			// alert("Data Posted. Status: " + response.status);
 			document.getElementById("summary").innerHTML =
 				"Data Posted! <br> Method: " +
 				response.config.method.toUpperCase() +
@@ -40,7 +39,6 @@ const get = async () => {
 		.get("https://jsonplaceholder.typicode.com/posts/1")
 		.then(function (response) {
 			console.log(response);
-			// alert("Data Fetched. Status: " + response.status);
 			document.getElementById("summary").innerHTML =
 				"Data Fetched! <br> Method: " +
 				response.config.method.toUpperCase() +
@@ -70,7 +68,13 @@ const put = async () => {
 		})
 		.then(function (response) {
 			console.log(response);
-			alert("Data Put. Status: " + response.status);
+			document.getElementById("summary").innerHTML =
+				"Data Updated! <br> Method: " +
+				response.config.method.toUpperCase() +
+				"<br> Status: " +
+				response.status +
+				"<br> Body: " +
+				response.data.body;
 		})
 		.catch(function (error) {
 			console.log(error);
@@ -91,7 +95,13 @@ const patch = async () => {
 		})
 		.then(function (response) {
 			console.log(response);
-			alert("Data patched. Status: " + response.status);
+			document.getElementById("summary").innerHTML =
+				"Data Updated! <br> Method: " +
+				response.config.method.toUpperCase() +
+				"<br> Status: " +
+				response.status +
+				"<br> Body: " +
+				response.data.body;
 		})
 		.catch(function (error) {
 			console.log(error);
@@ -110,7 +120,11 @@ const del = async () => {
 		.delete("https://jsonplaceholder.typicode.com/posts/1")
 		.then(function (response) {
 			console.log(response);
-			alert("Data deleted. Status: " + response.status);
+			document.getElementById("summary").innerHTML =
+				"Data Deleted! <br> Method: " +
+				response.config.method.toUpperCase() +
+				"<br> Status: " +
+				response.status;
 		})
 		.catch(function (error) {
 			console.log(error);

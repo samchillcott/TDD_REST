@@ -139,8 +139,7 @@ var post = /*#__PURE__*/function () {
               body: "bar",
               userId: 1
             }).then(function (response) {
-              console.log(response); // alert("Data Posted. Status: " + response.status);
-
+              console.log(response);
               document.getElementById("summary").innerHTML = "Data Posted! <br> Method: " + response.config.method.toUpperCase() + "<br> Status: " + response.status + "<br> Body: " + response.data.body;
             }).catch(function (error) {
               console.log(error);
@@ -172,8 +171,7 @@ var get = /*#__PURE__*/function () {
             console.log("btn clicked");
             _context2.next = 3;
             return axios.get("https://jsonplaceholder.typicode.com/posts/1").then(function (response) {
-              console.log(response); // alert("Data Fetched. Status: " + response.status);
-
+              console.log(response);
               document.getElementById("summary").innerHTML = "Data Fetched! <br> Method: " + response.config.method.toUpperCase() + "<br> Status: " + response.status + "<br> Body: " + response.data.body;
             }).catch(function (error) {
               console.log(error);
@@ -210,7 +208,7 @@ var put = /*#__PURE__*/function () {
               userId: 1
             }).then(function (response) {
               console.log(response);
-              alert("Data Put. Status: " + response.status);
+              document.getElementById("summary").innerHTML = "Data Updated! <br> Method: " + response.config.method.toUpperCase() + "<br> Status: " + response.status + "<br> Body: " + response.data.body;
             }).catch(function (error) {
               console.log(error);
             });
@@ -244,7 +242,7 @@ var patch = /*#__PURE__*/function () {
               title: "foo"
             }).then(function (response) {
               console.log(response);
-              alert("Data patched. Status: " + response.status);
+              document.getElementById("summary").innerHTML = "Data Updated! <br> Method: " + response.config.method.toUpperCase() + "<br> Status: " + response.status + "<br> Body: " + response.data.body;
             }).catch(function (error) {
               console.log(error);
             });
@@ -276,7 +274,7 @@ var del = /*#__PURE__*/function () {
             _context5.next = 3;
             return axios.delete("https://jsonplaceholder.typicode.com/posts/1").then(function (response) {
               console.log(response);
-              alert("Data deleted. Status: " + response.status);
+              document.getElementById("summary").innerHTML = "Data Deleted! <br> Method: " + response.config.method.toUpperCase() + "<br> Status: " + response.status;
             }).catch(function (error) {
               console.log(error);
             });
