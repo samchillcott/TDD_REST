@@ -11,7 +11,7 @@
 - Jest.js - unit testing.
 - RESTful API.
 - Axios - Promise based HTTP client for the browser and node.js.
-- package builder - build tool.
+- parcel-bundler - build tool.
 - Netlify - hosting.
 
 ## Features
