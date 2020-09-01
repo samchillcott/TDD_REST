@@ -1,13 +1,14 @@
 {
-  "scripts": {
-    "test": "jest"
-  },
-  "devDependencies": {
-    "jest": "^26.4.2",
-    "jest-cli": "^26.4.2"
-  },
-  "dependencies": {
-    "axios": "^0.20.0",
-    "node-fetch": "^2.6.0"
-  }
+	"scripts": {
+		"test": "jest"
+	},
+	"devDependencies": {
+		"jest": "^26.4.2",
+		"jest-cli": "^26.4.2"
+	},
+	"dependencies": {
+		"axios": "^0.20.0",
+		"node-fetch": "^2.6.0"
+	},
+	"type": "module"
 }
