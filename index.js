@@ -1,5 +1,41 @@
 // import axios from "axios";
 
+// DRY function
+
+const headers = {
+	headers: {
+		"Content-type": "application/json; charset=UTF-8",
+	},
+};
+
+const axiosRest = (method, url, payload, headers) => {
+	console.log("btn clicked");
+	await axios.${method}(${url}, ${payload}, ${headers})
+	.then(function (response) {
+		console.log(response);
+		document.getElementById("summary").innerHTML =
+			// "Data Posted! 
+			<br> Method: " +
+			response.config.method.toUpperCase() +
+			"<br> Status: " +
+			response.status +
+			"<br> Body: " +
+			response.data.body;
+	})
+	.catch(function (error) {
+		console.log(error);
+	});
+};
+
+
+
+axiosPost.addEventListener("click", axiosRest(post, "https://jsonplaceholder.typicode.com/posts", {
+	title: "foo",
+	body: "bar",
+	userId: 1,
+}, headers));
+
+
 // Imitates creating a resource (POST) at JSONPlaceholder
 
 const axiosPost = document.querySelector("#post-btn");
