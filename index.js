@@ -1,6 +1,7 @@
 // import axios from "axios";
 
 // DRY function
+const axiosPost = document.querySelector("#post-btn");
 
 const headers = {
 	headers: {
@@ -8,39 +9,49 @@ const headers = {
 	},
 };
 
-const axiosRest = (method, url, payload, headers) => {
+const axiosRest = async (method, url, payload, headers) => {
 	console.log("btn clicked");
-	await axios.${method}(${url}, ${payload}, ${headers})
-	.then(function (response) {
-		console.log(response);
-		document.getElementById("summary").innerHTML =
-			// "Data Posted! 
-			<br> Method: " +
-			response.config.method.toUpperCase() +
-			"<br> Status: " +
-			response.status +
-			"<br> Body: " +
-			response.data.body;
-	})
-	.catch(function (error) {
-		console.log(error);
-	});
+	console.log(method, url, payload, headers);
+	await `axios.${method}`(`${url}, ${payload}, ${headers}`)
+		.then(function (response) {
+			console.log(response);
+			document.getElementById("summary").innerHTML =
+				"Data Posted! " <
+				br >
+				"Method: " +
+					response.config.method.toUpperCase() +
+					"<br> Status: " +
+					response.status +
+					"<br> Body: " +
+					response.data.body;
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
 };
 
-
-
-axiosPost.addEventListener("click", axiosRest(post, "https://jsonplaceholder.typicode.com/posts", {
-	title: "foo",
-	body: "bar",
-	userId: 1,
-}, headers));
-
+axiosPost.addEventListener(
+	"click",
+	axiosRest(
+		"post",
+		"https://jsonplaceholder.typicode.com/posts",
+		{
+			title: "foo",
+			body: "bar",
+			userId: 1,
+		},
+		headers
+	)
+);
 
 // Imitates creating a resource (POST) at JSONPlaceholder
 
-const axiosPost = document.querySelector("#post-btn");
+{
+	/* const axiosPost = document.querySelector("#post-btn"); */
+}
 
-const post = async () => {
+{
+	/* const post = async () => {
 	console.log("btn clicked");
 	await axios
 		.post(
@@ -71,7 +82,8 @@ const post = async () => {
 		});
 };
 
-axiosPost.addEventListener("click", post);
+axiosPost.addEventListener("click", post); */
+}
 
 // Fetches a resource (GET) from JSONPlaceholder
 
