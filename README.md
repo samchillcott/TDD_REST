@@ -49,7 +49,7 @@
 ## Improvements
 
 - DRY the main functions - refactor to take 2 arguments: method and data.
-- Use React and webpack so imports compile easier (potentially enabling axios to be used in the node environment as well as the brwoser).
+- Use React and webpack so imports compile easier (potentially enabling axios to be used in the node environment as well as the browser).
 - Possibly use a wrapper object?
 - Host on AWS EC2 for further hosting experience.
 
@@ -63,6 +63,6 @@
 The following is the specification of the app, yet remember that with TDD you're expected to write tests for it **before** you write any of the actual code. All tests should fail at the beginning, and as you write each function they should all start succeeding one by one as the functionalities are being implemented. By the end, all tests should succeed.
 
 1. Create a basic page with five buttons, one for each REST verb: POST, GET, PUT, PATCH, DELETE
-2. Upon clicking a button, perform the appropriate REST action towards the placeholder REST API: https://jsonplaceholder.typicode.com/guide.html
+2. Upon clicking a button, perform the appropriate REST action towards the [placeholder REST API:](https://jsonplaceholder.typicode.com/guide.html).
 3. Just to solidify that REST knowledge - write a short comment on top of each function explaining what the particular REST verb performs.
 4. Use tests to verify that each REST action is executed correctly - compare the response's Status Codes and the payload.
