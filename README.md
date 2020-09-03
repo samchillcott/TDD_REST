@@ -13,6 +13,7 @@
 - Axios - Promise based HTTP client for the browser and node.js.
 - parcel-bundler - build tool.
 - Netlify - hosting.
+- DRY principles.
 
 ## Features
 
@@ -31,6 +32,7 @@
 - Axios - Promise based HTTP client for the browser and node.js. An alternative to fetch API.
 - Importing & exporting modules.
 - Executive decisions - When to drop a feature/fix (potentially during a sprint) and move on.
+- DRY - I am starting to really get the hang of not repeating myself and refactored the 5 original functions into one that took arguments of method, URL, body and headers. I also converted headers to an object to be passed in as to not repeat that either.
 
 ## Challenges
 
@@ -48,7 +50,6 @@
 
 ## Improvements
 
-- DRY the main functions - refactor to take 2 arguments: method and data.
 - Use React and webpack so imports compile easier (potentially enabling axios to be used in the node environment as well as the browser).
 - Possibly use a wrapper object?
 - Host on AWS EC2 for further hosting experience.
