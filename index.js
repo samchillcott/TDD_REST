@@ -21,13 +21,19 @@ const axiosRest = async (method, url, payload, headers) => {
 		.then(function (response) {
 			console.log(response);
 			document.getElementById("summary").innerHTML =
-				"Success!" +
-				"<br> Method: " +
-				response.config.method.toUpperCase() +
-				"<br> Status: " +
-				response.status +
-				"<br> Body: " +
-				response.data.body;
+				response.data.body !== undefined
+					? "Success!" +
+					  "<br> Method: " +
+					  response.config.method.toUpperCase() +
+					  "<br> Status: " +
+					  response.status +
+					  "<br> Body: " +
+					  response.data.body
+					: "Success!" +
+					  "<br> Method: " +
+					  response.config.method.toUpperCase() +
+					  "<br> Status: " +
+					  response.status;
 		})
 		.catch(function (error) {
 			console.log(error);
