@@ -14,6 +14,7 @@
 - parcel-bundler - build tool.
 - Netlify - hosting.
 - DRY principles.
+- docblock (JSDoc).
 
 ## Features
 
@@ -33,6 +34,7 @@
 - Importing & exporting modules.
 - Executive decisions - When to drop a feature/fix (potentially during a sprint) and move on.
 - DRY - I am starting to really get the hang of not repeating myself and refactored the 5 original functions into one that took arguments of method, URL, body and headers. I also converted headers to an object to be passed in as to not repeat that either.
+- docblock JSDoc basics - Can now comment my methods and functions including parameters.
 
 ## Challenges
 
