@@ -12,8 +12,14 @@ const headers = {
 	},
 };
 
-// DRY function
-
+/**
+ * Function that takes in the HTTP method, url, payload and headers to then executes the method and displays
+ *     result on screen.
+ * @param  {string} method
+ * @param  {string} url
+ * @param  {object} payload
+ * @param  {object} headers
+ */
 const axiosRest = async (method, url, payload, headers) => {
 	console.log("btn clicked");
 	console.log(method, url, payload, headers);
